@@ -1,8 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+/* UNIVERSAL STYLES */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+body{
+  background: hsl(230, 17%, 14%);
+}
+
+p{
+  letter-spacing: 0.2rem;
+}
+
+h1, 
+h2{
+  color: white;
+}
+
+h1{
+  font-size: 55px;
+}
+
+h5,
+h4,
+p{
+  color: hsl(228, 34%, 66%);
+}
+
+/* OUTER BODY */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* HEADER */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme{
+  display: flex;
+  gap: 30px;
+}
+
+/* DARK MODE TOGGLE */
+.label{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  padding: 5px;
+  position: relative;
+}
+
+/* DARK MODE BALL */
+.ball{
+  background-color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(23px);
+}
+
+.checkbox{
+  position: absolute;
+  opacity: 0;
+}
+/* HEADER END */
+
+/* FOLLOWER SECTION */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.follower{
+  padding: 30px;
+  width: 100%;
+  background-color: hsl(228, 28%, 20%);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.stats{
+  margin: 30px 0;
+}
+
+.handle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gains{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.gains h5{
+  color: hsl(163, 72%, 41%);
+}
+/* HEADER ENDS */
+
+/* SECTION */
+.section{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.box{
+  padding: 30px;
+  width: 100%;
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.names{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deprciate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
 }
