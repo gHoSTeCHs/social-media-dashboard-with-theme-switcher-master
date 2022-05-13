@@ -11,6 +11,11 @@
 
 body{
   background: hsl(230, 17%, 14%);
+  transition: background 0.3s linear;
+}
+
+body.light{
+  background: white;
 }
 
 p{
@@ -22,6 +27,14 @@ h2{
   color: white;
 }
 
+h1.light{
+  color: hsl(230, 17%, 14%);
+}
+
+h2.light{
+  color: hsl(230, 17%, 14%);
+}
+
 h1{
   font-size: 55px;
 }
@@ -30,6 +43,10 @@ h5,
 h4,
 p{
   color: hsl(228, 34%, 66%);
+}
+
+.red h5{
+  color: hsl(356, 69%, 56%);
 }
 
 /* OUTER BODY */
@@ -48,7 +65,9 @@ p{
 
 .theme{
   display: flex;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
 }
 
 /* DARK MODE TOGGLE */
@@ -59,20 +78,27 @@ p{
   width: 50px;
   height: 26px;
   border-radius: 50px;
-  background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   padding: 5px;
   position: relative;
+  transition: background 0.3s linear;
+}
+.label.light{
+  background: hsl(230, 22%, 74%);
 }
 
 /* DARK MODE BALL */
 .ball{
-  background-color: white;
+  background-color: hsl(230, 17%, 14%);
   width: 22px;
   height: 22px;
   border-radius: 50%;
   position: absolute;
   left: 3px;
   transition: transform 0.3s linear;
+}
+.ball.light{
+  background-color: white;
 }
 
 .checkbox:checked + .label .ball{
@@ -92,6 +118,7 @@ p{
   align-items: center;
   text-align: center;
   gap: 30px;
+  margin: 50px 0 ;
 }
 
 .follower{
@@ -99,7 +126,24 @@ p{
   width: 100%;
   background-color: hsl(228, 28%, 20%);
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 6px;
+  transition: background 0.3s linear;
+}
+
+.follower.light{
+  background-color: hsl(225, 100%, 98%);
+}
+
+.card1{
+  border-top: 5px solid hsl(228, 34%, 66%);
+}
+
+.card3{
+  border-top: 5px solid lightcoral;
+}
+
+.card4{
+  border-top: 5px solid hsl(356, 69%, 56%);
 }
 
 .stats{
@@ -123,7 +167,15 @@ p{
 .gains h5{
   color: hsl(163, 72%, 41%);
 }
+
+.gains.red h5{
+  color: hsl(356, 69%, 56%);
+}
 /* HEADER ENDS */
+
+.main{
+  margin-bottom: 20px;
+}
 
 /* SECTION */
 .section{
@@ -133,7 +185,7 @@ p{
 }
 
 .box{
-  padding: 30px;
+  padding: 20px;
   width: 100%;
   background-color: hsl(228, 28%, 20%);
   border-radius: 7px;
@@ -144,7 +196,7 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .details{
@@ -158,4 +210,12 @@ p{
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+}
+
+.deprciate{
+  color: hsl(163, 72%, 41%);
+}
+
+.red h6{
+  color: hsl(356, 69%, 56%);
 }
